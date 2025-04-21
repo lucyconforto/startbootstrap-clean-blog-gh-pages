@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Riddle Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .riddle {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .answer {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #333;
+      display: none;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 0.5rem;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Riddle Generator</h1>
+    <div class="riddle" id="riddle">Click below to get a riddle!</div>
+    <div class="answer" id="answer"></div>
+    <button onclick="generateRiddle()">New Riddle</button>
+    <button onclick="showAnswer()">Show Answer</button>
+  </div>
+
+  <script>
+    const riddles = [
+      { question: "What has to be broken before you can use it?", answer: "An egg." },
+      { question: "I’m tall when I’m young, and I’m short when I’m old. What am I?", answer: "A candle." },
+      { question: "What has a head, a tail, but no body?", answer: "A coin." },
+      { question: "What gets wetter the more it dries?", answer: "A towel." },
+      { question: "I speak without a mouth and hear without ears. What am I?", answer: "An echo." },
+      { question: "What can run but never walks, has a bed but never sleeps?", answer: "A river." },
+      { question: "The more of me you take, the more you leave behind. What am I?", answer: "Footsteps." },
+      { question: "What can fill a room but takes up no space?", answer: "Light." }
+    ];
+
+    let currentAnswer = "";
+
+    function generateRiddle() {
+      const randomIndex = Math.floor(Math.random() * riddles.length);
+      const riddle = riddles[randomIndex];
+      document.getElementById("riddle").textContent = riddle.question;
+      document.getElementById("answer").style.display = "none";
+      document.getElementById("answer").textContent = riddle.answer;
+      currentAnswer = riddle.answer;
+    }
+
+    function showAnswer() {
+      const answerDiv = document.getElementById("answer");
+      if (currentAnswer) {
+        answerDiv.style.display = "block";
+      }
+    }
+  </script>
+</body>
+<a href="scratch.html">
+    <button>Back to Scratch</button>
+  </a>
+  
+</html>

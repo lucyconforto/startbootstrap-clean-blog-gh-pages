@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/scratch.css">
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Winter Hobbies</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 0;
+      right : 0;
+      background-color: #f0f0f0;
+      padding: 10px 20px;
+      display: flex;
+      gap: 15px;
+      border-bottom-left-radius: 10px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #ddd;
+      color: blue;
+    }
+
+    ol {
+      padding-left: 0;
+      list-style-position: inside;
+    }
+
+    ul {
+      list-style-type: circle;
+      margin-right: 0;
+      padding-right: 0;
+      list-style-position: inside;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    p {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Links -->
+  <div class="nav-links">
+    <a href="index.html">Resume</a>
+    <a href="webapp.html">Riddle Generator</a>
+  </div>
+<br><br><br><br><br>
+  <!-- Main Centered Content -->
+  <div class="container">
+    <h1>My Favorite Winter Hobbies</h1>
+    <ol class="centered-list">
+      <li><strong>Skiing</strong></li>
+      <ul>
+        <li>I get to see the beautiful mountains</li>
+        <li>It's fun to go fast</li>
+        <li>I can go with friends</li>
+      </ul>
+  
+      <li><strong>Iceskating</strong></li>
+      <ul>
+        <li>It's challenging</li>
+        <li>Makes for cute pictures</li>
+        <li>Reminds me of Christmas</li>
+      </ul>
+  
+      <li><strong>Snowball Fights</strong></li>
+      <ul>
+        <li>It's competitive</li>
+        <li>Gives an adrenaline rush</li>
+        <li>There's a strategic element</li>
+      </ul>
+    </ol>
+  </div>
+  
+
+    <img src="assets/img/Skiing.jpg" alt="Skiing" width="200" />
+
+    <a href="https://music.youtube.com/watch?v=SHiOlBjwk18" target="_blank">Skiing Video</a>
+    <div class="section" id="video-section">
+        <h2>Skiing in Action</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" 
+                title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      </div>
+      
+      <div class="section" id="tableau-section">
+        <h2>Winter Sport Popularity</h2>
+        <div class="tableauPlaceholder" id="viz168">
+          <noscript>
+            <a href="https://public.tableau.com/views/Skiing/Sheet2">
+              <img alt="Skiing Tableau Chart" src="https://public.tableau.com/static/images/Sk/Skiing/Sheet2/1_rss.png" style="border: none" />
+            </a>
+          </noscript>
+          <iframe src="https://public.tableau.com/views/Skiing/Sheet2?:embed=true&:showVizHome=no"
+        width="800" height="600" frameborder="0" allowfullscreen="true"></iframe>
+
+          <object class="tableauViz" width="100%" height="600" style="display:none;">
+            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+            <param name="embed_code_version" value="3" />
+            <param name="site_root" value="" />
+            <param name="name" value="Skiing/Sheet2" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="yes" />
+            <param name="static_image" value="https://public.tableau.com/static/images/Sk/Skiing/Sheet2/1.png" />
+            <param name="animate_transition" value="yes" />
+            <param name="display_static_image" value="yes" />
+            <param name="display_spinner" value="yes" />
+            <param name="display_overlay" value="yes" />
+            <param name="display_count" value="yes" />
+            <param name="language" value="en-US" />
+          </object>
+        </div>
+        <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+        <script type="text/javascript">
+          window.addEventListener('DOMContentLoaded', function () {
+            var placeholderDiv = document.getElementById("viz168");
+            var vizElement = placeholderDiv.getElementsByTagName("object")[0];
+            vizElement.style.display = "block";
+          });
+        </script>
+      </div>
+      
+      
+      
+
+  </div>
+</body>
+</html>
